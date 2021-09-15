@@ -52,12 +52,12 @@ Environment variables
 This env var must be set to ``true`` in order to enable trace context injection into logs by calling ``logging.basicConfig()`` and
 setting a logging format that makes use of the injected tracing variables.
 
-Alternatively, ``set_logging_format`` argument can be set to ``True`` when initializing the ``LoggingInstrumentor`` class to acheive the
+Alternatively, ``set_logging_format`` argument can be set to ``True`` when instrumenting the ``LoggingInstrumentor`` class to acheive the
 same effect.
 
 .. code-block::
 
-    LoggingInstrumentor(set_logging_format=True)
+    LoggingInstrumentor().instrument(set_logging_format=True)
 
 The default value is ``false``.
 
